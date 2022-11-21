@@ -2,16 +2,17 @@
 
 
 const sayHello = function(name) {
-  if (name === `Mark` || name === `mark`) {
+  if (name.toUpperCase === `MARK`) {
     return "Hi, Mark!";
   }
 
-  const upperCasedFirstLetter = name.replace(name[0],name[0].toUpperCase());
+  const firstCapitalLetter = name[0].toUpperCase();
+  const restChars = name.slice(1).toLowerCase();
 
-  return `Hello, ${upperCasedFirstLetter}!`;
+  return `Hello, ${firstCapitalLetter}${restChars}!`;
 }
 
-console.log (sayHello (`Anya`));
+console.log (sayHello (`KeVin`));
 
 
 

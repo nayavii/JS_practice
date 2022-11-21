@@ -1,11 +1,7 @@
 // Напишите функцию min (a,b), которая возвращает меньшее из чисел a, b.
 
 const min = function (a, b) {
-  if (a < b) {
-    return a;
-  }
-  
-  return b;
+  return Math.min(a, b);
 }
 
-console.log (min (10, 2));
+ console.log(min(10, 20));

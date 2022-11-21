@@ -7,16 +7,15 @@
 
 const someFunction = function (word) {
 
-  const lastCapitalLetter = word.slice(-1).toUpperCase();
   const firstCapitalLetter = word[0].toUpperCase();
   const restChars = word.slice(1).toLowerCase(); 
 
   if (word.length % 2 === 0) {
     
-    return firstCapitalLetter + restChars.slice(1, -1) + lastCapitalLetter;
+    return firstCapitalLetter + restChars.slice(0, -1) + word.slice(-1).toUpperCase();
   }
   
   return firstCapitalLetter + restChars;
 }
 
-console.log (someFunction('apple'))
+console.log (someFunction('watermelon'))
