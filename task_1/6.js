@@ -11,8 +11,8 @@ const someFunction = function (word) {
   const restChars = word.slice(1).toLowerCase(); 
 
   if (word.length % 2 === 0) {
-    
-    return firstCapitalLetter + restChars.slice(0, -1) + word.slice(-1).toUpperCase();
+    const lastCapitalLetter = word.slice(-1).toUpperCase();
+    return firstCapitalLetter + restChars.slice(0, -1) + lastCapitalLetter;
   }
   
   return firstCapitalLetter + restChars;
